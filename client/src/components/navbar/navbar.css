@@ -1,0 +1,34 @@
+.navbars {
+    background-color: lightblue;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 15px;
+    color: black;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    border-bottom: 1px solid whitesmoke;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.title{
+    font-size: 50px;
+}
+.info{
+    font-size: 25px;
+}
+#linksDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.links{
+    padding: 10px;
+}
+#navbarinfo{
+    display: flex;
+    flex-direction: column;
+}

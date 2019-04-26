@@ -1,0 +1,10 @@
+.bookButton{
+    border: none;
+    background-color: white;
+    color: red;
+    margin: 5px;
+    padding: 8px;
+}
+.bookButton:hover{
+    cursor: pointer;
+}

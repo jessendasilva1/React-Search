@@ -1,0 +1,40 @@
+#bookDiv{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+}
+#bookTitleDiv{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+#buttonsDiv{
+    display: flex;
+    flex-direction: row;
+}
+.bookButtons{
+    border-radius: 15%;
+    background-color: #007bff;
+    color: white;
+    margin: 5px;
+    padding: 8px;
+}
+.bookInfo{
+    display: flex;
+    flex-direction: column;
+}
+.view{
+    display: flex;
+    flex-direction: column;
+}
+.test{
+    display: flex;
+    flex-direction: row;
+}
+.image{
+    margin-right: 10px;
+    margin-top: 10px;
+}

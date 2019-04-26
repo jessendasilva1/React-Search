@@ -1,0 +1,13 @@
+#home{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+#searchinput{
+    width: 100vw;
+}
+.noBooks{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
