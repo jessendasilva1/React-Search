@@ -22,7 +22,6 @@ class SavedBooks extends Component {
             this.setState({
                 booksArray: res.data
             })
-            console.log(res);
         })
         .catch(err => {
             console.log(err);
@@ -34,7 +33,6 @@ class SavedBooks extends Component {
             <div>
                 {this.state.booksArray.length > 0 ?
                     this.state.booksArray.map((book, index) => {
-                        //console.log(image);
                         return (
                             <BookList key={index} bookData={book} buttonSwitch="saved" update={this.updateArray}/>
                         );

@@ -22,7 +22,6 @@ class Home extends Component {
     }
 
     handleSearchInput = (event) => {
-        console.log("input changed. " + event.target.value);
         this.setState({
             searchName: event.target.value
         })
@@ -32,11 +31,9 @@ class Home extends Component {
         let title = this.state.searchName.trim();
         API.searchBooks(title)
             .then(res => {
-                //console.log(res.data);
                 this.populateBooksArray(res.data.items);
             })
             .catch(err => console.log(err));
-        console.log("submit book title");
     }
 
     populateBooksArray = (bookData) => {
@@ -50,9 +47,7 @@ class Home extends Component {
                     link: "",
                     image: ""
                 }
-                console.log(bookData);
                 if(bookData[0].volumeInfo.title === undefined || bookData[0].volumeInfo.authors === undefined ||  bookData[0].volumeInfo.previewLink === undefined ||  bookData[0].volumeInfo.description === undefined || bookData[0].volumeInfo.imageLinks === undefined){
-                    console.log("missing field");
                     bookData = bookData.slice(1);
                     continue;
                 } else {
@@ -62,7 +57,6 @@ class Home extends Component {
                     newBook.link = bookData[0].volumeInfo.previewLink;
                     newBook.image = bookData[0].volumeInfo.imageLinks.thumbnail;
                 }                   
-                console.log(newBook);
                 bookArray.push(newBook);
                 bookData = bookData.slice(1);
             }while(bookData.length > 0);
@@ -74,7 +68,6 @@ class Home extends Component {
             this.setState({
                 booksArray: booksArray
             })
-            console.log("in promise. All books done!");
         })
         .catch((err) => {
             console.log("err: " + err);
@@ -95,7 +88,6 @@ class Home extends Component {
                 }
                 {this.state.booksArray.length > 0 ?
                     this.state.booksArray.map((book, index) => {
-                        //console.log(image);
                         return (
                             <BookList key={index} bookData={book} buttonSwitch="search" saveBook={this.savedBookMessage}/>
                         );

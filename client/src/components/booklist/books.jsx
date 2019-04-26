@@ -9,7 +9,6 @@ class Books extends Component {
         this.props.saveBook();
         API.saveBook(this.props.bookData)
             .then(res => {
-                console.log(res);
             })
             .catch(err => console.log(err));
     }
